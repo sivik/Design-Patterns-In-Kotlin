@@ -1,4 +1,5 @@
 import org.junit.jupiter.api.Test
+import java.util.*
 
 class Printer(private val stringFormatterStrategy: (String) -> String) {
 
@@ -7,8 +8,8 @@ class Printer(private val stringFormatterStrategy: (String) -> String) {
     }
 }
 
-val lowerCaseFormatter: (String) -> String = { it.toLowerCase() }
-val upperCaseFormatter = { it: String -> it.toUpperCase() }
+val lowerCaseFormatter: (String) -> String = { it.lowercase(Locale.getDefault()) }
+val upperCaseFormatter = { it: String -> it.uppercase(Locale.getDefault()) }
 
 class StrategyTest {
 

@@ -11,7 +11,7 @@ open class Composite(name: String) : Equipment(0, name) {
     private val equipments = ArrayList<Equipment>()
 
     override val price: Int
-        get() = equipments.map { it.price }.sum()
+        get() = equipments.sumOf { it.price }
 
 
     fun add(equipment: Equipment) =

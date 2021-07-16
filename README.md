@@ -104,8 +104,8 @@ class Printer(private val stringFormatterStrategy: (String) -> String) {
     }
 }
 
-val lowerCaseFormatter: (String) -> String = { it.toLowerCase() }
-val upperCaseFormatter = { it: String -> it.toUpperCase() }
+val getLowerCaseFormatter: (String) -> String = { it.toLowerCase() }
+val getUpperCaseFormatter = { it: String -> it.toUpperCase() }
 ```
 
 #### Usage
@@ -113,10 +113,10 @@ val upperCaseFormatter = { it: String -> it.toUpperCase() }
 ```kotlin
 val inputString = "LOREM ipsum DOLOR sit amet"
 
-val lowerCasePrinter = Printer(lowerCaseFormatter)
+val lowerCasePrinter = Printer(getLowerCaseFormatter)
 lowerCasePrinter.printString(inputString)
 
-val upperCasePrinter = Printer(upperCaseFormatter)
+val upperCasePrinter = Printer(getUpperCaseFormatter)
 upperCasePrinter.printString(inputString)
 
 val prefixPrinter = Printer { "Prefix: $it" }
