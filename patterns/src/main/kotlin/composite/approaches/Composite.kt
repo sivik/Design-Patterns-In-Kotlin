@@ -14,7 +14,7 @@ internal class Composite(name: String) : Component(name) {
 
     override fun display(depth: Int) {
         children.forEach { component ->
-            component.display(depth + 1);
+            component.display(depth + 1)
         }
     }
 }
