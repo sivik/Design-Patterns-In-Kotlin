@@ -1,8 +1,8 @@
 # Design Patterns In Kotlin
 
-#### :warning: New article about testing: [Unit Testing with Mockito 2](https://github.com/dbacinski/Android-Testing-With-Kotlin/blob/master/docs/Unit-Testing-Mockito.md)
+Project extended by Sivik
 
-Project maintained by [@dbacinski](http://twitter.com/dbacinski) (Dariusz Baciński)
+Project created and maintained by [@dbacinski](http://twitter.com/dbacinski) (Dariusz Baciński)
 
 Inspired by [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patterns-In-Swift) by [@nsmeme](http://twitter.com/nsmeme) (Oktawian Chojnacki)
 
@@ -22,6 +22,7 @@ Inspired by [Design-Patterns-In-Swift](https://github.com/ochococo/Design-Patter
 	* [Factory Method](#factory-method)
 	* [Singleton](#singleton)
 	* [Abstract Factory](#abstract-factory)
+	* [Prototype](#prototype)
 * [Structural Patterns](#structural)
 	* [Adapter](#adapter)
 	* [Decorator](#decorator)
@@ -799,6 +800,11 @@ println("Created plant: $plant")
 ```kotlin
 Created plant: OrangePlant@4f023edb
 ```
+
+[Prototype]
+-----------------
+
+WIP
 
 Structural
 ==========
