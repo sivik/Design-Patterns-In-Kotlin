@@ -10,7 +10,7 @@ class Product {
 
     fun show()
     {
-        println("Product Parts -------");
+        println("Product Parts -------")
         parts.forEach { part ->
             println(part)
         }
