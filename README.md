@@ -74,7 +74,7 @@ class TextView {
 
 ```kotlin
 val textView = TextView().apply {
-    listener = PrintingTextChangedListener()
+    listeners.add(PrintingTextChangedListener())
 }
 
 with(textView) {
@@ -285,8 +285,7 @@ class ContentTypeHeader(val contentType: String, var next: HeadersChain? = null)
 class BodyPayload(val body: String, var next: HeadersChain? = null) : HeadersChain {
 
     override fun addHeader(inputHeader: String): String =
-        inputHeader + "$body"
-            .let { next?.addHeader(it) ?: it }
+        inputHeader + body.let { next?.addHeader(it) ?: it }
 }
 ```
 
@@ -633,8 +632,8 @@ fun dialog(init: DialogBuilder.() -> Unit): Dialog {
 }
 
 val dialog: Dialog = dialog {
-	title {
-    	text = "Dialog Title"
+    title {
+        text = "Dialog Title"
     }
     message {
         text = "Dialog Message"
